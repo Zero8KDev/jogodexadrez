@@ -1,6 +1,15 @@
 public class Peca {
 
+    protected String nome;
+
+    public Peca(String nome) {
+        this.nome = nome;
+    }
+
     public void mover() {
-        System.out.println("Peça movendo");
+    }
+
+    public String getNome() {
+        return nome;
     }
 }

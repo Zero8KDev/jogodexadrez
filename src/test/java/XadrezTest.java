@@ -4,10 +4,22 @@ import org.junit.jupiter.api.Test;
 public class XadrezTest {
 
     @Test
-    void verificarPeca() {
+    void verificarJogoDeXadrez() {
+        Assertions.assertNotNull(new JogoDeXadrez());
+    }
 
-        Peca peca = new Peca();
+    @Test
+    void verificarJogadorHumano() {
+        Assertions.assertNotNull(new JogadorHumano('b'));
+    }
 
-        Assertions.assertNotNull(peca);
+    @Test
+    void verificarJogadorSintetico() {
+        Assertions.assertNotNull(new JogadorSintetico('p'));
+    }
+
+    @Test
+    void verificarTabuleiro() {
+        Assertions.assertNotNull(new Tabuleiro());
     }
 }
