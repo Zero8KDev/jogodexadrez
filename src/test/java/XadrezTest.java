@@ -22,4 +22,16 @@ public class XadrezTest {
     void verificarTabuleiro() {
         Assertions.assertNotNull(new Tabuleiro());
     }
+
+    @Test
+    void verificarCasaLivre() {
+        Tabuleiro tabuleiro = new Tabuleiro();
+        Assertions.assertTrue(tabuleiro.casaLivre("A3"));
+    }
+
+    @Test
+    void verificarCasaOcupada() {
+        Tabuleiro tabuleiro = new Tabuleiro();
+        Assertions.assertFalse(tabuleiro.casaLivre("A1"));
+    }
 }

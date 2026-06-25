@@ -11,7 +11,15 @@ public class JogoDeXadrez implements Jogo {
         while (!tabuleiro.acabouOJogo()) {
 
             jogador1.jogar(tabuleiro, "", 0);
-            jogador2.jogar(tabuleiro, "", 0);
+
+            java.util.Scanner entrada = new java.util.Scanner(System.in);
+
+            System.out.print("Deseja continuar jogando? (S/N): ");
+            String resposta = entrada.nextLine();
+
+            if (resposta.equalsIgnoreCase("N")) {
+                break;
+            }
         }
     }
 
